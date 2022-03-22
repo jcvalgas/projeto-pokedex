@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar-header">
+                <a href="" class="navbar-brand">
+                    <img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" alt="logo-pokedex">
+                </a>
+                <ul class="itens">
+                    <li>Dragon Ball</li>
+                    <li>Naruto</li>
+                    <li>YuGiOh</li>
+                </ul>
+            </nav>
+            <div class="row">
+                <h1>A Biblioteca da Primeira Geração de Pokemons</h1>
+                <img src="https://i.pinimg.com/originals/50/e1/db/50e1db4684e6f697f93590950eb832f6.png" alt="">
+            </div>
+        </div>
+    </header>
+    <section class="white-section">
+        <img src="https://repository-images.githubusercontent.com/240816796/2b9a2280-710c-11eb-8615-0bf1b22313ee" alt="logo-pokedex">
+        <hr />
+    </section>
+    <main>
+    <% pokedexArray.forEach(element => { %>
+    <a href="/detalhes/<%= element.id %> ">
+    <div class="card-container">
+        <div class='header-card'>
+            <span class="card-id"> <%= element.id %> </span>
+            <span class="card-number"><%= element.num %></span>
+        </div>
+        <div class="main-card">
+            <img src="<%= element.img %> " alt="<%= element.name %> ">
+            <div class="name"><%=element.name%></div>
+            <div class='content'>
+                <span class="weight"><%=element.weight%></span>
+                <span class="height"><%=element.height%></span>
+            </div>
+        </div>
+        <div class='footer-card'><%=element.type%></div>
+    </div>
+</a>
+    <% }) %>
+</main>    
+</body>
+</html>

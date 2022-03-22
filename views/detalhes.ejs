@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/details.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <title>Pokedex</title>
+</head>
+<body>
+    <% pokemonAtual.forEach(element => { %>
+    <header>
+        <h1> Pokemon:<%= element.name %> </h1>
+    </header>
+    <main>
+        <div id="main-cards">
+            <div id="card-container-front">
+                <div class='header-card'>
+                    <span class="card-id"> <%= element.id %> </span>
+                    <span class="card-number"><%= element.num %></span>
+                </div>
+                <div class="main-card">
+                    <img src="<%= element.img %> " alt="<%= element.name %> ">
+                    <div class="name"><%=element.name%></div>
+                    <div class='content'>
+                        <span class="weight"><%=element.weight%></span>
+                        <span class="height"><%=element.height%></span>
+                    </div>
+                </div>
+                <div class='footer-card'><%=element.type%></div>
+            </div>
+            <div id="card-container-back">
+                <div class='header-card'>
+                    <span class="card-id"> <%= element.id %> </span>
+                    <span class="card-number"><%= element.num %></span>
+                </div>
+                <div class="main-card">
+                    <div class="weaknesses"> <%= element.weaknesses %> </div>
+                    <div class="candy"> <%= element.candy %> </div>
+                </div>
+                <div class='footer-card'><%=element.type%></div>
+            </div>
+        </div>
+        <% }) %>
+        <a href="http://localhost:3001"><div id="button-home">Voltar para página inicial</div></a>
+    </main>    
+</body>
+</html>

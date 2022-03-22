@@ -1,0 +1,28 @@
+{
+  "name": "projeto-pokedex",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcvalgas/projeto-pokedex.git"
+  },
+  "author": "J. C. Valgas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcvalgas/projeto-pokedex/issues"
+  },
+  "homepage": "https://github.com/jcvalgas/projeto-pokedex#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
